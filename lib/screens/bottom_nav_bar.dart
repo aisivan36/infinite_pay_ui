@@ -18,9 +18,7 @@ Widget buildCurrentWidget(int index) {
       return const HistoryScreen();
 
     case 2:
-      return const _TemporaryHomeScreen(
-        title: 'My Card',
-      );
+      return const HistoryScreen();
     case 3:
       return const _TemporaryHomeScreen(
         title: 'Settings',
