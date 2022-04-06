@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:infinite_pay_ui/widgets/card_overlay.dart';
 
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({Key? key}) : super(key: key);
@@ -8,6 +9,7 @@ class HistoryScreen extends StatelessWidget {
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
+      backgroundColor: const Color(0xfff7f9ff),
       body: SingleChildScrollView(
         physics: const NeverScrollableScrollPhysics(),
         child: Column(
@@ -60,70 +62,36 @@ class HistoryScreen extends StatelessWidget {
                   /// Lists of cards
 
                   Positioned.fill(
-                    top: 70,
+                    top: 96,
                     left: 20,
                     right: 20,
                     child: MaterialApp(
                       home: Scaffold(
+                        backgroundColor: Colors.transparent,
                         extendBody: true,
-                        body: ListView.builder(
+                        body: ListView.separated(
+                          separatorBuilder: (context, index) => const SizedBox(
+                            height: 20,
+                          ),
                           itemCount: 10,
-                          shrinkWrap: true,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Card(
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 100,
-                                    height: 100,
-                                    decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(8),
-                                        bottomLeft: Radius.circular(8),
-                                      ),
-                                      color: Color(0xff0c2073),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: SizedBox(
-                                      height: 100,
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: const [
-                                          Text(
-                                            'History',
-                                            style: TextStyle(
-                                              color: Color(0xff0c2073),
-                                              fontSize: 12,
-                                              fontFamily: "Hind",
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          Text(
-                                            'History',
-                                            style: TextStyle(
-                                              color: Color(0xff0c2073),
-                                              fontSize: 12,
-                                              fontFamily: "Hind",
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            );
+                          itemBuilder: (context, index) {
+                            return const CardOverlay();
                           },
+                          padding: const EdgeInsets.only(bottom: 0),
+                          // children: const [
+                          //   CardOverlay(),
+                          //   CardOverlay(),
+                          //   CardOverlay(),
+                          //   CardOverlay(),
+                          //   CardOverlay(),
+                          // ],
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
