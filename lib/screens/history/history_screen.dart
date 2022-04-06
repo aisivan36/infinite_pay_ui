@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_pay_ui/widgets/card_overlay.dart';
 
@@ -32,10 +33,13 @@ class HistoryScreen extends StatelessWidget {
                         color: Color(0xff0c2073),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 25.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        padding: const EdgeInsets.only(
+                          top: 25.0,
+                          left: 20,
+                          right: 20,
+                        ),
+                        child: Stack(
+                          alignment: Alignment.topCenter,
                           children: [
                             Text(
                               title,
@@ -47,19 +51,39 @@ class HistoryScreen extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
+                            Align(
+                              alignment: Alignment.topRight,
+                              child: CupertinoButton(
+                                // color: Colors.red,
+                                padding: const EdgeInsets.all(0),
+                                pressedOpacity: .4,
+                                onPressed: () {},
+                                child: const Icon(
+                                  Icons.add_circle_outline_rounded,
+                                  color: Colors.white,
+                                  size: 30,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
                     ),
-                    const Positioned(
-                      top: 30,
-                      right: 20,
-                      child: Icon(
-                        Icons.add_circle_outline_rounded,
-                        color: Colors.white,
-                        size: 30,
-                      ),
-                    ),
+                    // Positioned(
+                    //   top: 30,
+                    //   right: 20,
+                    //   child: CupertinoButton(
+                    //     // color: Colors.red,
+                    //     padding: const EdgeInsets.all(0),
+                    //     pressedOpacity: .4,
+                    //     onPressed: () {},
+                    //     child: const Icon(
+                    //       Icons.add_circle_outline_rounded,
+                    //       color: Colors.white,
+                    //       size: 30,
+                    //     ),
+                    //   ),
+                    // ),
 
                     /// Lists of cards
 
