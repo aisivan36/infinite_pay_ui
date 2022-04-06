@@ -41,14 +41,17 @@ class HistoryScreen extends StatelessWidget {
                         child: Stack(
                           alignment: Alignment.topCenter,
                           children: [
-                            Text(
-                              title,
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontFamily: "Hind",
-                                fontWeight: FontWeight.w600,
+                            Padding(
+                              padding: const EdgeInsets.all(3.0),
+                              child: Text(
+                                title,
+                                textAlign: TextAlign.center,
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontFamily: "Hind",
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                             Align(
