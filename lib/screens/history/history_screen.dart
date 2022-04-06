@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:infinite_pay_ui/widgets/card_overlay.dart';
 
 class HistoryScreen extends StatelessWidget {
-  const HistoryScreen({Key? key}) : super(key: key);
+  const HistoryScreen({Key? key, required this.title}) : super(key: key);
+  final String title;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      extendBodyBehindAppBar: true,
-      backgroundColor: const Color(0xfff7f9ff),
-      body: SingleChildScrollView(
-        physics: const NeverScrollableScrollPhysics(),
-        child: SafeArea(
+    return SafeArea(
+      child: Scaffold(
+        extendBody: true,
+        extendBodyBehindAppBar: true,
+        backgroundColor: const Color(0xfff7f9ff),
+        body: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -35,11 +36,11 @@ class HistoryScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             Text(
-                              'My Cards',
+                              title,
                               textAlign: TextAlign.center,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
                                 fontFamily: "Hind",

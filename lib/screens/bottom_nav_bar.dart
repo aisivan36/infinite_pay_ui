@@ -15,10 +15,14 @@ Widget buildCurrentWidget(int index) {
     case 0:
       return const HomeOverview();
     case 1:
-      return const HistoryScreen();
+      return const HistoryScreen(
+        title: 'History',
+      );
 
     case 2:
-      return const HistoryScreen();
+      return const HistoryScreen(
+        title: 'My Cards',
+      );
     case 3:
       return const _TemporaryHomeScreen(
         title: 'Settings',
