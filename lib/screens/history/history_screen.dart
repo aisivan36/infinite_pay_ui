@@ -75,7 +75,7 @@ class HistoryScreen extends StatelessWidget {
                                 const SizedBox(
                               height: 20,
                             ),
-                            itemCount: 10,
+                            itemCount: 5,
                             itemBuilder: (context, index) {
                               return const CardOverlay();
                             },
