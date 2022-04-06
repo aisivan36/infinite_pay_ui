@@ -42,7 +42,7 @@ class HistoryScreen extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 20,
-                                fontFamily: "Hind Siliguri",
+                                fontFamily: "Hind",
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
