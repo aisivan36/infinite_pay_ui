@@ -49,13 +49,16 @@ class GeneralMenus extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          Text(
-            title,
-            style: const TextStyle(
-              color: Color(0xff0c2073),
-              fontSize: 14,
-              fontFamily: "Hind",
-              fontWeight: FontWeight.w500,
+          FittedBox(
+            alignment: Alignment.center,
+            child: Text(
+              title,
+              style: const TextStyle(
+                color: Color(0xff0c2073),
+                fontSize: 14,
+                fontFamily: "Hind",
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
         ],
