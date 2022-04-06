@@ -69,6 +69,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             BottonBarBottom(
+              isColorSelected: currentIndex == 0,
               index: 0,
               onPressed: (index) {
                 setState(() {
@@ -80,6 +81,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'Overview',
             ),
             BottonBarBottom(
+              isColorSelected: currentIndex == 1,
               index: 1,
               onPressed: (index) {
                 setState(() {
@@ -92,6 +94,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
             const SizedBox(width: 65),
             BottonBarBottom(
+              isColorSelected: currentIndex == 2,
               index: 2,
               onPressed: (index) {
                 setState(() {
@@ -103,6 +106,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
               text: 'My Card',
             ),
             BottonBarBottom(
+              isColorSelected: currentIndex == 3,
               index: 3,
               onPressed: (index) {
                 setState(() {

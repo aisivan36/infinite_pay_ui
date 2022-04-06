@@ -8,6 +8,7 @@ class BottonBarBottom extends StatelessWidget {
     this.index = 0,
     this.icons = '',
     this.text = '',
+    required this.isColorSelected,
   }) : super(key: key);
 
   /// The height of the bottom bar.
@@ -25,6 +26,8 @@ class BottonBarBottom extends StatelessWidget {
   /// Initialize the title of the bottom bar
   final String text;
 
+  final bool isColorSelected;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -36,13 +39,16 @@ class BottonBarBottom extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.asset(icons, height: 15, width: 15),
+              Image.asset(icons, height: 15, width: 15
+                  // ,color: isColorSelected ? Colors.white : Colors.black
+                  ),
               // Icon(item.iconData, color: color, size: widget.iconSize),
               Text(
                 text,
                 // style: TextStyle(color: color),
-                style: const TextStyle(
-                  color: Color(0xff0c2073),
+                style: TextStyle(
+                  color:
+                      isColorSelected ? const Color(0xff0c2073) : Colors.black,
                   fontSize: 12,
                   fontFamily: "Hind",
                   fontWeight: FontWeight.w500,
