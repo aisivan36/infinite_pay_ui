@@ -48,7 +48,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
         decoration: BoxDecoration(
             shape: BoxShape.circle,
-            border: Border.all(color: Colors.white, width: 13)),
+            border: Border.all(color: Colors.white, width: 11)),
         child: SizedBox(
           height: 50,
           child: FloatingActionButton(

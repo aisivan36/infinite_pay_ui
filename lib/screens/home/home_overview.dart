@@ -12,103 +12,106 @@ class HomeOverview extends StatelessWidget {
       extendBody: true,
       extendBodyBehindAppBar: true,
       backgroundColor: const Color(0xfff7f9ff),
-      body: SafeArea(
-        child: ListView(
+      body: SingleChildScrollView(
+        child: Column(
           children: [
             /// AppBar
-            SizedBox(
-              height: 400,
-              // width: double.infinity,
-              // width: 399,
-              child: Stack(
-                children: [
-                  Container(
-                    width: double.infinity,
-                    height: 290,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(20),
-                          bottomRight: Radius.circular(20)),
-                      color: Color(0xff0c2073),
-                    ),
-                    child: Stack(
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      // mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Positioned(
-                          left: 20,
-                          top: 25,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              // borderRadius: BorderRadius.circular(37.5),
-                              shape: BoxShape.circle,
-                              border: Border.all(width: 1, color: Colors.white),
-                              // color: const Color(0xFFE3E6EF),
-                            ),
-                            child: SizedBox(
-                              height: 50,
-                              width: 50,
-                              child: Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(30),
-                                  child: Image.asset(
-                                    'assets/images/dakota.jpg',
-                                    height: 50,
-                                    width: 50,
-                                    fit: BoxFit.cover,
+            SafeArea(
+              child: SizedBox(
+                height: 400,
+                // width: double.infinity,
+                // width: 399,
+                child: Stack(
+                  children: [
+                    Container(
+                      width: double.infinity,
+                      height: 290,
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(20),
+                            bottomRight: Radius.circular(20)),
+                        color: Color(0xff0c2073),
+                      ),
+                      child: Stack(
+                        // crossAxisAlignment: CrossAxisAlignment.start,
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Positioned(
+                            left: 20,
+                            top: 25,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                // borderRadius: BorderRadius.circular(37.5),
+                                shape: BoxShape.circle,
+                                border:
+                                    Border.all(width: 1, color: Colors.white),
+                                // color: const Color(0xFFE3E6EF),
+                              ),
+                              child: SizedBox(
+                                height: 50,
+                                width: 50,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(5.0),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(30),
+                                    child: Image.asset(
+                                      'assets/images/dakota.jpg',
+                                      height: 50,
+                                      width: 50,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          top: 25,
-                          right: 55,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: const [
-                              Padding(
-                                padding: EdgeInsets.symmetric(vertical: 8.0),
-                                child: Text(
-                                  'My Card',
+                          Positioned(
+                            top: 25,
+                            right: 55,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: const [
+                                Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 8.0),
+                                  child: Text(
+                                    'My Card',
+                                    style: TextStyle(
+                                      color: Color(0xffa5b5f4),
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  'Bank Shayna',
                                   style: TextStyle(
-                                    color: Color(0xffa5b5f4),
-                                  ),
+                                      color: Colors.white,
+                                      fontFamily: "Hind",
+                                      fontWeight: FontWeight.bold),
                                 ),
-                              ),
-                              Text(
-                                'Bank Shayna',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: "Hind",
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        const Positioned(
-                          top: 45,
-                          right: 20,
-                          child: Icon(
-                            Icons.keyboard_arrow_down,
-                            color: Color(0xffa5b5f4),
-                            size: 30,
+                          const Positioned(
+                            top: 45,
+                            right: 20,
+                            child: Icon(
+                              Icons.keyboard_arrow_down,
+                              color: Color(0xffa5b5f4),
+                              size: 30,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                  const Positioned(
-                    top: 125,
-                    left: 20,
-                    right: 20,
+                    const Positioned(
+                      top: 125,
+                      left: 20,
+                      right: 20,
 
-                    /// Card Overlay
-                    child: CardOverlay(),
-                  ),
-                ],
+                      /// Card Overlay
+                      child: CardOverlay(),
+                    ),
+                  ],
+                ),
               ),
             ),
 
